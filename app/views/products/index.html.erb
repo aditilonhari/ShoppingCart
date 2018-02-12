@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
+<div>
+  <h3>Current customer</h3>
+  <b><i><%= current_customer.firstname %> <%= current_customer.lastname %></i></b>
+  <%= link_to "  Go to my order page -> ", order_show_url %>
+</div>
 
 <h3>Products</h3>
 
@@ -21,6 +26,7 @@
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add to order', add_to_order_path_url(product) %></td>
       </tr>
     <% end %>
   </tbody>

@@ -4,15 +4,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_customer
 
   def current_order
-    if !session[:order_id].nil?
-      Order.find(session[:order_id])
-    else
-      Order.new
-
-    end
+      Order.first
+      p "First order"
+      p Order.first
   end
 
   def current_customer
-    Customer.new(firstname: "John", lastname: "Doe")
-   end
+     Customer.new(firstname: "John", lastname: "Doe")
+  end
 end
