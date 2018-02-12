@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @product.name %>
+  <strong>Product Name:</strong>
+  <i><b><%= @product.name %></b></i>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category_id %>
+  <%= Category.find(@product.category_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

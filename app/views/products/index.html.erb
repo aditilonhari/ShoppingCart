@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h3>Products</h3>
 
 <table>
   <thead>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path,  {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %>
+<%= link_to 'New Category', new_category_path, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %>

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  resources :customers
   resources :categories
   resources :products
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :order_items, only: [:create, :update, :destroy]
+  resource :cart, only: [:show]
+
   root to: 'products#index'
+
 end

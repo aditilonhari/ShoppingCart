@@ -11,9 +11,12 @@
 </p>
 
 <h4> Products under this category </h4>
-<% Product.where(category_id: @category.id).each do |product| %>
-  <li> <%= product.name %> </li>
-<% end %>
+<ul>
+  <% Product.where(category_id: @category.id).each do |product| %>
+    <li> <%= product.name %> </li>
+  <% end %>
+</ul>
 <br/>
 <%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Back to Category listing', categories_path %> |
+<%= link_to 'Back to Product listing', products_path %>
